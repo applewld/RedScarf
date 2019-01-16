@@ -1,0 +1,70 @@
+<view>
+  <view class="search-content">
+    <view class="search-inner-content" bindtap='goSearch'>
+      <image src="/images/search-pic.png" class="search-icon" />
+      <input bindinput="bindReplaceInput" bindblur="gosearch" placeholder="搜索" />
+    </view>
+  </view>
+  <view class='list-item'  wx:if="{{showListItem}}">
+    <text>悬赏: {{RewardNotices.length}}条相关公告</text>
+    <image src="/images/arrow-down.png" class="down-icon" bindtap='showRewardNotice'/>
+  </view>
+  <view wx:if="{{showRewardNotice}}">
+    <view wx:if="{{RewardNotices.length>0}}">
+      <view wx:for="{{RewardNotices}}" wx:for-item="RewardNotice">
+        <view class="order-content">
+          <view class="order-info">
+            <view class="user-info">
+              <image class="order-avatar" src="{{RewardNotice.avatarUrl}}"></image>
+              <text>{{RewardNotice.nickName}}</text>
+            </view>
+            <view class="money-info">
+              <image src="/images/money.png"></image>
+              <text>{{RewardNotice.rewardMoney}}元</text>
+            </view>
+          </view>
+          <view class="order-text">
+            <text>{{RewardNotice.content}}</text>
+          </view>
+          <view class="order-time-btn">
+            <text>发布于：{{RewardNotice.date}}</text>
+            <view class="order-btn {{RewardNotice.userId==userId ? 'disabledColor':''}}" bindtap='tapTakeOrder' data-Notice="{{RewardNotice}}">接单</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:else class="none">暂无与搜索内容相关的悬赏通告</view>
+  </view>
+
+
+  <view class='list-item'  wx:if="{{showListItem}}">
+    <text>待命: {{WaitOrderNotices.length}}条相关公告</text>
+    <image src="/images/arrow-down.png" class="down-icon" bindtap='showWaitOrderNotice'/>
+  </view>
+  <view wx:if="{{showWaitOrderNotice}}">
+    <view wx:if="{{WaitOrderNotices.length>0}}">
+      <view wx:for="{{WaitOrderNotices}}" wx:for-item="WaitOrderNotice">
+        <view class="order-content">
+          <view class="order-info">
+            <view class="user-info">
+              <image class="order-avatar" src="{{WaitOrderNotice.avatarUrl}}"></image>
+              <text>{{WaitOrderNotice.nickName}}</text>
+            </view>
+            <view class="money-info">
+              <image src="/images/money.png"></image>
+              <text>{{WaitOrderNotice.rewardMoney}}元</text>
+            </view>
+          </view>
+          <view class="order-text">
+            <text>{{WaitOrderNotice.content}}</text>
+          </view>
+          <view class="order-time-btn">
+            <text>发布于：{{WaitOrderNotice.date}}</text>
+            <view class="order-btn {{WaitOrderNotice.userId==userId ? 'disabledColor':''}}" bindtap='tapbook' data-Notice="{{WaitOrderNotice}}">预定</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:else class="none">暂无与搜索内容相关的待命通告</view>
+  </view>
+</view>

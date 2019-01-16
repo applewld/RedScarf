@@ -1,0 +1,16 @@
+<view class='pub-container'>
+  <view class='pub-money'>
+    <text>赏金：</text>
+    <input placeholder-class="input-holder" type="number" bindblur="inputMoney"></input>
+    <text>元</text>
+  </view>
+  <view class='pub-content'>
+    <text>内容：</text>
+    <view class="section">
+      <textarea bindinput="bindTextAreaBlur" placeholder="" />
+    </view>
+  </view>
+  <view class='pub-btn' bindtap="submit">
+    <text>确认预定</text>
+  </view>
+</view>

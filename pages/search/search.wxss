@@ -1,0 +1,148 @@
+.search-content {
+  width: 100%;
+  height: 80rpx;
+  background-color: #fc8c7f;
+  padding-top: 25rpx;
+}
+
+.search-inner-content {
+  width: 80%;
+  height: 60rpx;
+  background-color: #fff;
+  border-radius: 50px;
+  margin: auto;  
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-left: 20rpx;
+}
+.search-inner-content{
+  color: #777777;
+  font-size: 28rpx;
+  line-height: 60rpx;
+}
+.search-inner-content input{
+  margin-top: 5rpx;
+}
+.search-icon {
+  width: 25rpx;
+  height: 25rpx;
+  margin-top: 20rpx;
+  margin-right: 5px;
+}
+
+.order-content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.order-info {
+  width: 90%;
+  margin: 10px auto 5px;
+  height: 50rpx;
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  color: #a8a7a7;
+  justify-content: space-between;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.order-avatar {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.order-text {
+  width: 90%;
+  margin: 0 auto;
+  word-wrap: break-word;
+  font-size: 16px;
+  color: #616161;
+}
+
+.money-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.money-info image {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.order-time-btn {
+  width: 90%;
+  height: 20px;
+  margin: 5px auto 0px;
+  font-size: 14px;
+  color: #a8a7a7;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.order-btn {
+  width: 40px;
+  height: 20px;
+  background-color: #fc8c7f;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  line-height: 20px;
+}
+
+.tab-bottom {
+  border-bottom: 5px solid #fc8c7f;
+  color: #616161;
+}
+
+.none {
+  width: 80%;
+  margin: 20px auto;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  color: #4b4747;
+}
+.disabledColor{
+  background-color: #ccc;
+}
+
+page {
+  background-color: #f3f3f3;
+}
+
+.list-item{
+  width: 100%;
+  height: 70rpx;
+  line-height: 70rpx;
+  background-color: #fff;
+  padding-left:20rpx;
+  margin-top: 20rpx;
+  /* border-bottom: 1px solid #ccc; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #9b9b9b;
+  font-size: 32rpx;
+}
+.list-item image{
+  height: 35rpx;
+  width: 35rpx;
+  margin-right: 40rpx;
+  margin-top: 20rpx;
+}

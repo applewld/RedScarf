@@ -1,0 +1,23 @@
+<view class='pub-container'>
+  <view class='pub-type'>
+    <text>类型：</text>
+    <radio-group color='red' class="radio-group" bindchange="radioChange">
+      <radio color='#fc8c7f'  value="0" checked="true" />悬赏
+      <radio color='#fc8c7f' value="1" />待命
+    </radio-group>
+  </view>
+  <view class='pub-money'>
+    <text>赏金：</text>
+    <input placeholder-class="input-holder" type="number" bindblur="inputMoney"></input>
+    <text>元</text>
+  </view>
+  <view class='pub-content'>
+    <text>内容：</text>
+    <view class="section">
+      <textarea bindinput="bindTextAreaBlur" placeholder="" />
+    </view>
+  </view>
+  <view class='pub-btn' bindtap="submit">
+    <text>确认发布</text>
+  </view>
+</view>

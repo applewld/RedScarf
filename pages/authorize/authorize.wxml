@@ -1,0 +1,5 @@
+<view class='auth-container'>
+    <text class='auth-title'>用户未授权</text>
+    <text class='auth-content'>小程序需要获取用户头像、昵称等信息，如需正常使用小程序功能，请点击下方同意授权按钮。</text>
+    <button  class='auth-btn' open-type="getUserInfo" bindgetuserinfo="getUserInfo">同意授权</button>
+</view>

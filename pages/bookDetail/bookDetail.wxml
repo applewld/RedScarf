@@ -1,0 +1,36 @@
+<view wx:if="{{hasData}}">
+<view wx:for="{{bookDetailList}}" wx:for-item="bookDetail">
+  <view class="order-content">
+    <view class="order-info">
+      <view class="user-info">
+        <image class="order-avatar" src="{{bookDetail.orderAvatarUrl}}"></image>
+        <text>{{bookDetail.orderNickName}} 的订单</text>
+      </view>
+      <view class="money-info">
+        <image src="/images/money.png"></image>
+        <text>{{bookDetail.rewardMoney}}元</text>
+      </view>
+    </view>
+    <view class="order-text">
+      <text>{{bookDetail.content}}</text>
+    </view>
+    <view class="order-time-btn">
+      <text>预定于：{{bookDetail.date}}</text>
+    </view>
+    <view class="order-time-btn" wx:if="{{bookDetail.status==4}}">
+      <view class="order-btn" bindtap='refuceTakeOrder' data-orderid="{{bookDetail._id}}">拒绝接单</view>
+      <view class="order-btn" bindtap='confirmTakeOrder' data-orderid="{{bookDetail._id}}">确认接单</view>
+    </view>
+    <view class="order-time-btn" wx:elif="{{bookDetail.status==5}}">
+      <text>对方已取消预定</text>
+    </view>
+    <view class="order-time-btn" wx:elif="{{bookDetail.status==6}}">
+      <text>您已拒绝接单</text>
+    </view>
+    <view class="order-time-btn" wx:else>
+      <text>您已接单,可在“我的接单”页面查看</text>
+    </view>
+  </view>
+</view>
+</view>
+<view wx:else class="none">暂时还没有人预定。</view>

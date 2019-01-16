@@ -1,0 +1,71 @@
+<view class="info-container">
+  <view class='info-avatar-name'>
+    <image src="{{userInfo.avatarUrl}}"></image>
+    <text>{{userInfo.nickName}}</text>
+  </view>
+  <view class="info-list-container">
+    <view class="info-item" bindtap="showModal">
+      <view>
+        <image class="img1" src="/images/school.png"></image>
+        <text>修改学校、校区</text>
+      </view>
+      <image class="img2" src="/images/arrow-right.png"></image>
+    </view>
+    <view class="info-item" bindtap='goPublishList'>
+      <view>
+        <image class="img1" src="/images/publish.png"></image>
+        <text>我的发布</text>
+      </view>
+      <image class="img2" src="/images/arrow-right.png"></image>
+    </view>
+    <view class="info-item" bindtap='goMyOrder'>
+      <view>
+        <image class="img1" src="/images/order.png"></image>
+        <text>我的订单</text>
+      </view>
+      <image class="img2" src="/images/arrow-right.png"></image>
+    </view>
+    <view class="info-item" bindtap='goMyReceive'>
+      <view>
+        <image class="img1" src="/images/receive.png"></image>
+        <text>我的接单</text>
+      </view>
+      <image class="img2" src="/images/arrow-right.png"></image>
+    </view>
+    <view class="info-item" bindtap='goMsgList'>
+      <view>
+        <image class="img1" src="/images/msgList.png"></image>
+        <text>消息列表 </text>
+        <text wx:if="{{hasMsg}}" style='color:#fc8c7f'>(有新消息了)</text>
+      </view>
+      <image class="img2" src="/images/arrow-right.png"></image>
+    </view>
+    <view class="info-item" style="border-bottom:none;" bindtap="goFeedBack">
+      <view>
+        <image class="img1" src="/images/feedback.png"></image>
+        <text>反馈</text>
+      </view>
+      <image class="img2" src="/images/arrow-right.png"></image>
+    </view>
+  </view>
+</view>
+
+<!-- 弹出框 -->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <view class="modal-title">请填写所在学校、校区</view>
+  <view class="modal-content">
+    <view class="modal-input">
+      <input placeholder-class="input-holder" type="text" bindblur="inputSchool" class="input" placeholder="例：杭州师范大学" value="{{school}}"></input>
+    </view>
+    <view class="modal-input">
+      <input placeholder-class="input-holder" type="text" bindblur="inputCampus" class="input" placeholder="例：仓前校区" value="{{campus}}"></input>
+    </view>
+  </view>
+  <view class="modal-footer">
+    <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+    <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+  </view>
+
+
+</view>

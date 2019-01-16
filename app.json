@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/feedback/feedback",
+    "pages/msgList/msgList",
+    "pages/info/info",
+    "pages/search/search",
+    "pages/home/home",
+    "pages/chat/chat",
+    "pages/bookDetail/bookDetail",
+    "pages/book/book",
+    "pages/myReceive/myReceive",
+    "pages/myOrder/myOrder",
+    "pages/publishList/publishList",
+    "pages/userPublish/userPublish",
+    "pages/authorize/authorize"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fc8c7f",
+    "navigationBarTitleText": "红领巾",
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "images/home-off.png",
+        "selectedIconPath": "images/home-on.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/info/info",
+        "iconPath": "images/my-off.png",
+        "selectedIconPath": "images/my-on.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

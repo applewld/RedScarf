@@ -1,0 +1,6 @@
+<view class='feedback-container'>
+    <form bindsubmit='bindFormSubmit'>
+        <textarea auto-focus='true' placeholder='写下对红领巾的功能建议或发现的系统问题，么么哒' placeholder-class='textarea-placeholder' name="textarea"></textarea>
+        <button form-type='submit' class='submit-btn' bindtap='send'>提交</button>
+    </form>
+</view>

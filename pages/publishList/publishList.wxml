@@ -1,0 +1,51 @@
+<view class='pubList-container'>
+  <view class='pubList-nav'>
+    <view class="pubList-reward {{first?'tab-bottom':''}}" bindtap='tapReward'>
+      <text>悬赏</text>
+    </view>
+    <view class='add' bindtap='goUserPublish'>
+      <image src="/images/add.png"></image>
+    </view>
+    <view class="pubList-wait {{first?'':'tab-bottom'}}" bindtap='tapWaitOrder'>
+      <text>待命</text>
+    </view>
+  </view>
+  <view wx:if="{{hasData}}">
+    <view wx:for="{{NoticeList}}" wx:key="Notice" wx:for-item="Notice">
+      <view class='pubList-content'>
+        <view class='content-time-money'>
+          <view class='pub-time'>
+            <text class='index'>{{index+1}}</text>
+            <text>发布于： {{Notice.date}}</text>
+          </view>
+          <view class='pub-money'>
+            <image src='/images/money.png'></image>
+            <text>{{Notice.rewardMoney}}元</text>
+          </view>
+        </view>
+        <text class='notice-content'>{{Notice.content}}</text>
+        <view class='status-btn' wx:if="{{Notice.type == 0}}">
+          <text wx:if="{{Notice.status==0&&!Notice.isPublish}}">您已取消发布,无人接单</text>
+          <text wx:elif="{{Notice.status==0&&Notice.isPublish}}">待接单</text>
+          <text wx:else>已被接单</text>
+          <view wx:if="{{Notice.isPublish}}" class='btn' bindtap='cancelPublish' data-noticeid="{{Notice._id}}">取消发布</view>
+          <view wx:else class='btn' bindtap='deleteRewardNotice' data-noticeid="{{Notice._id}}">删除记录</view>
+        </view>
+        <view class='status-btn' wx:else>
+          <view class='end-info'>
+            <text>收到 {{Notice.status}} 人预定</text>
+            <view wx:if="{{Notice.status}}" bindtap='goBookDetail' data-noticeid="{{Notice._id}}">
+              <text>查看</text>
+            </view>
+          </view>
+          <view wx:if="{{Notice.isPublish}}" class='btn' bindtap='cancelPublish' data-noticeid="{{Notice._id}}">取消发布</view>
+          <view wx:else class='btn' bindtap='deleteWaitOrderNotice' data-noticeid="{{Notice._id}}">删除记录</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:else class=" none ">暂无任何发布消息</view>
+  <view class='new-info'>
+      <text>点击正上方加号图标可进行发布</text>
+  </view>
+</view>

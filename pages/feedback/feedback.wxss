@@ -1,0 +1,25 @@
+textarea{
+  border-bottom: 1px solid #ccc;
+  width: 750rpx;
+  height: 400rpx;
+  background-color: #fff;
+  padding: 30rpx;
+  box-sizing: border-box;
+  letter-spacing: 2rpx;
+  font-size: 42rpx;
+  color: #616161;
+}
+.textarea-placeholder{
+  font-size: 28rpx;
+}
+.submit-btn{
+  height: 100rpx;
+  width: 100%;
+  position:absolute;
+  bottom: 0rpx;
+  background-color: #fc8c7f;
+  color: #fff;
+}
+page {
+  background-color: #f3f3f3;
+}

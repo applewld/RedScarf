@@ -1,0 +1,104 @@
+page {
+  background-color: #f3f3f3;
+}
+
+.order-content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.order-info {
+  width: 90%;
+  margin: 10px auto 5px;
+  height: 50rpx;
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  color: #a8a7a7;
+  justify-content: space-between;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.order-avatar {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.order-text {
+  width: 90%;
+  margin: 0 auto;
+  word-wrap: break-word;
+  font-size: 16px;
+  color: #616161;
+}
+
+.money-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.money-info image {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.order-time-btn {
+  width: 90%;
+  height: 20px;
+  margin: 5px auto 0px;
+  font-size: 14px;
+  color: #a8a7a7;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.order-time {
+  width: 90%;
+  height: 20px;
+  margin: 5px auto 0px;
+  font-size: 14px;
+  color: #a8a7a7;
+}
+
+.order-btn {
+  width: 80px;
+  height: 20px;
+  background-color: #fc8c7f;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  line-height: 20px;
+}
+
+.provide-btn {
+  width: 90%;
+  height: 20px;
+  margin: 10px auto 0px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #a8a7a7;
+}
+.none {
+  width: 80%;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  color: #4b4747;
+}

@@ -1,0 +1,45 @@
+<view>
+  <view class="search-content">
+    <view class="search-inner-content" bindtap='goSearch'>
+      <image src="/images/search-pic.png" class="search-icon" />
+      <text>搜索</text>
+    </view>
+  </view>
+  <view class="navigator-content">
+    <view class="navigator-one {{first?'tab-bottom':''}}" bindtap="tapReward">
+      <text>悬赏</text>
+    </view>
+    <view class="navigator-sec {{first?'':'tab-bottom'}}" bindtap="tapWaitOrder">
+      <text>待命</text>
+    </view>
+  </view>
+  <view wx:if="{{hasData}}">
+    <view wx:for="{{NoticeList}}" wx:key="Notice" wx:for-item="Notice">
+      <view class="order-content">
+        <view class="order-info">
+          <view class="user-info">
+            <image class="order-avatar" src="{{Notice.avatarUrl}}"></image>
+            <text>{{Notice.nickName}}</text>
+          </view>
+          <view class="money-info">
+            <image src="/images/money.png"></image>
+            <text>{{Notice.rewardMoney}}元</text>
+          </view>
+        </view>
+        <view class="order-text">
+          <text>{{Notice.content}}</text>
+        </view>
+        <view class="order-time-btn">
+          <text>发布于：{{Notice.date}}</text>
+          <view wx:if="{{first}}">
+            <view class="order-btn {{Notice.userId==userId ? 'disabledColor':''}}" bindtap='tapTakeOrder' data-Notice="{{Notice}}">接单</view>
+          </view>
+          <view wx:else>
+            <view class="order-btn {{Notice.userId==userId ? 'disabledColor':''}}" bindtap='tapbook' data-Notice="{{Notice}}">预定</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:else class="none">该学校、校区暂无数据</view>
+</view>

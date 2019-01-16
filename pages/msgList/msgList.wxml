@@ -1,0 +1,21 @@
+<view class='container' wx:if="{{hasData}}">
+  <view wx:for="{{msgList}}" wx:key="item" wx:for-item="item" data-toUser="{{item}}" bindtap='goChat'>
+    <view class='msg-container'>
+      <image src='{{item.avatarUrl}}'></image>
+      <view class='msg-text'>
+        <view class='msg-name-time'>
+          <text class='msg-name'>{{item.nickName}}</text>
+          <text class='msg-time'>{{item.date}}</text>
+        </view>
+        <view class='msg-content'>
+          <text class='msg-item'>{{item.content}}</text>
+          <view class='msg-count'>
+            <text>{{item.count}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>
+<view wx:else class="none">该学校、校区暂无数据</view>

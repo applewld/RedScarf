@@ -1,0 +1,50 @@
+.pub-container{
+  display: flex;
+ flex-direction: column; 
+ color: #555353;
+}
+.pub-money{
+  display: flex;
+  flex-direction: row;
+  height:50px; 
+  line-height: 50px;
+  width: 100%;
+  padding-left: 10px;
+  border-bottom:1px solid #ccc;
+}
+.pub-money input{
+  /* background-color: #ccc; */
+  height:35px;
+  width: 100px;
+  margin-top: 5px;
+  border-bottom: 1px solid #ccc;
+}
+.pub-content{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.pub-content text{
+  height:50px; 
+  line-height: 50px;
+  margin-left: 10px;
+}
+.pub-content textarea{
+  width: 85%;
+  margin: 0 auto;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #ccc;
+
+}
+.pub-btn{
+  width: 50%;
+  height: 50px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 10px;
+}

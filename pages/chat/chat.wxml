@@ -1,0 +1,45 @@
+<template name="other">
+  <view class='group'>
+    <view wx:if="{{showTime}}" class='chat-time'>
+      <text>{{date}}</text>
+    </view>
+    <view class='other-record'>
+      <image class='other-head-img' src='{{avatarUrl}}'></image>
+      <view class='other-record-content-triangle'></view>
+      <view class='other-record-content'>
+        {{content}}</view>
+    </view>
+  </view>
+</template>
+<template name="own">
+  <view class='group'>
+    <view wx:if="{{showTime}}" class='chat-time'>
+      <text>{{date}}</text>
+    </view>
+    <view class='own-record'>
+      <view class='own-record-content'>{{content}}</view>
+      <view class='own-record-content-triangle'></view>
+      <image class='own-head-img' src='{{avatarUrl}}'></image>
+    </view>
+  </view>
+</template>
+
+<view class='news'>
+
+  <!-- <view class="historycon"> -->
+  <scroll-view scroll-y="true" scroll-with-animation="true" class="history" scroll-top="{{scrollTop}}" scroll-into-view="{{lastId}}">
+    <view class='new_top_txt'>您正在与 {{toUser.nickName}} 聊天</view>
+    <view  id="msg{{index}}" wx:for="{{messages}}" wx:key="messages{{index}}">
+      <!-- <view> -->
+        <template is="{{item.type == 0 ? 'own' : 'other'}}" data="{{ ...item }}" />
+      <!-- </view> -->
+    </view>
+  </scroll-view>
+  <!-- </view> -->
+
+</view>
+<!-- <view class='hei' id="hei"></view> -->
+<view class="sendmessage">
+  <input class="chat-input" placeholder-class="input-placeholder" type="text" bindinput="bindChange" confirm-type="done" value='{{msg}}' bindfocus="onFocus" placeholder="" />
+  <view class="btn" bindtap='send'>发送</view>
+</view>
